@@ -1,14 +1,9 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+<div class="jumbotron">
+  <h1><%= @post.title %></h1>
+  <p><%= @post.content %></p>
+  <p><span class="label label-primary"><%= @post.tag %></span></p>
+  <p><%= link_to '수정하기', edit_post_path(@post), class: 'btn btn-success' %>
+<%= link_to '뒤로가기', posts_path, class: 'btn btn-default' %>
 </p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</div>
